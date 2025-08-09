@@ -9,30 +9,194 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3/5.0.0/animate.min.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs.animate.css/4.1.1/animate.min.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/hover.css/2.3.1/css/hover.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/hover.css/2.3.1/css/hover-min.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs.animate.css/3.7.2/animate.min.css">
-        
+        <link rel="stylesheet" href="styles.css">
+        <link rel="icon" href="favicon.ico" type="image/x-icon">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/js/bootstrap.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/hover.css/2.3.1/js/hover.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"></script>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/scrollReveal.js/4.0.7/scrollreveal.min.js"></script>
+        <script>
+            $(document).ready(function() {
+                ScrollReveal().reveal('.container', { delay: 200 });
+                ScrollReveal().reveal('.text-center', { delay: 300 });
+            });
+        </script>
+        <style>
+            body {
+                background-color: #cedff1;
+                background-image: url('https://th.bing.com/th/id/R.f6ea4c8bce8f5c9d23d6f73fe1c5cf10?rik=5rZIrBnG1lOw3Q&riu=http%3a%2f%2fwww.planetcustodian.com%2fwp-content%2fuploads%2f2015%2f09%2fIceland-landscape-photography-15.jpg&ehk=fHd556Es46IR1KMdWI9MhYzUgkwFDc8JrURmrlnyBbg%3d&risl=&pid=ImgRaw&r=0');
+                background-size: cover;
+                background-position: center;
+                font-family: 'Arial', sans-serif;
+                color: #333;
+                margin: 0;
+                padding: 0;
+                height: 100vh;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                text-align: center;
+                overflow: hidden;
+            }
+            .welcome {
+                text-align: center;
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: text;
+                font-family: 'Courier New', Courier, monospace;
+                font-size: 15px;
+                font-weight: bolder;
+                color: #000000;
+                text-shadow: 2px 2px 4px rgba(108, 108, 108, 0.3);
+                margin-bottom: 10px;
+                padding: 10px;
+                background-color: rgba(62, 144, 192, 0.816);
+                border-radius: 10px;
+                box-shadow: 0 4px 8px rgba(95, 95, 95, 0.2);
+                width: 100%;
+                transition: transform 0.3s ease;
+                animation: fadeIn 1s ease-in-out;
+            }
+            .container {
+                margin-top: 20px;
+            }
+            .text-center {
+                margin-top: 20px;
+            }
+            .text-muted {
+                position: center, fixed;
+                bottom: 0;
+                width: 100%;
+                text-align: center;
+                transform: none;
+                scale: none;
+            }
+            floater {
+                background-color: rgba(78, 77, 77, 0.3);
+                color: rgb(255, 255, 255);
+                padding: 10px 0;
+                position: fixed;
+                bottom: 0;
+                width: 100%;
+                transform: none;
+                scale: none;
+            }
+            floater p {
+                margin: 0;
+                scale: none;
+            } 
+            .btn.primary {
+                background-color: #7f817f;
+                color: white;
+            }
+            .btn.primary:hover {
+                background-color: #050505;
+            }
+            .hvr-grow:hover {
+                transform: rotateX('angle', 10deg);
+            }
+            .hvr-state:hover {
+                transition: transform 0.3s ease;
+                transform: rotate('angle', 10deg);
+            }
+            @keyframes fadeIn {
+                from {
+                    opacity: 0;
+                    transform: translateY(-20px);
+                }
+                to {
+                    opacity: 1;
+                    transform: translateY(0);
+                }
+            }
+            @media (max-width: 768px) {
+                .welcome {
+                    font-size: 12px;
+                }
+                .btn.primary {
+                    width: 100%;
+                    margin-bottom: 10px;
+                }
+            }
+            .fa-twitter, .fa-instagram {
+                font-size: 24px;
+                margin: 0 10px;
+                text-decoration: none;
+                display: inline-block;
+                width: 20px;
+                height: 20px;
+                line-height: 20px;
+                border-radius: 40%;
+                background-size: cover;
+            }
+            .fa-twitter:hover, .fa-instagram:hover {
+                transform: scale(1.1);
+                background-color: rgba(255, 255, 255, 0.8);
+            }
+            .fa-twitter{
+                color: #1da1f2;
+                background-image: url('https://thf.bing.com/th/id/OIP.OiRP0Wt_nlImTXz5w45aRQHaHa?w=194&h=194&c=7&r=0&o=7&cb=thfc1&dpr=1.3&pid=1.7&rm=3');
+            
+            }
+            .fa-instagram{
+                color: #e1306c;
+                background-image: url('https://thf.bing.com/th/id/OIP.ho1dc1a3VpPFl1Fy3pv5vAHaHZ?w=175&h=180&c=7&r=0&o=7&cb=thfc1&dpr=1.3&pid=1.7&rm=3');
+            }
+            
+            
+        </style>
     </head>
 
     <body>
+        <div class="welcome">
+            <h1>WELCOME TO SJOHN's PAGE</h1>
+            <p>This is for demonstation purposes only.</p>
+        </div>
         <div class="container">
-            <h1 class="text-center">Welcome to sjohn's page</h1>
-            <p class="text-center">This is for demonstation purposes only.</p>
             <div class="text-center">
                 <a href=index.html class="btn btn primary hvr-grow">Home</a>
                 <a href=about.html class="btn btn primary hvr-grow">About</a>
-                <a href=contact.html class="btn btn primary hvr-grow">Contact</a>    
+                <a href=projects.html class="btn btn primary hvr-grow">Projects</a>
+                <a href=blog.html class="btn btn primary hvr-grow">Blog</a>
+                <a href=gallery.html class="btn btn primary hvr-grow">Gallery</a>
+                <a href=faq.html class="btn btn primary hvr-grow">FAQ</a>
+                <a href=terms.html class="btn btn primary hvr-grow">Terms</a>
+                <a href=privacy.html class="btn btn primary hvr-grow">Privacy</a>
+                <a href=help.html class="btn btn primary hvr-grow">Help</a>
+        
+
+
             </div>
 
         </div>
         <floater class="fixed-bottom text-center">
             <div class="container">
-                <p class="text-muted">@2025 sjohn | All rights reserved</p>
+                <p class="text-muted">@ 2025 SJohn | All rights reserved</p>
                 <p class="text-muted">Follow me on:
-                    
+                    <a href="https://twitter.com/seprijohn" class="text-white hvr-state"><i class="fab fa-twitter"></i></a>
+                    <a href="https://instagram.com/john.dsu" class="text-white hvr-state"><i class="fab fa-instagram"></i></a>
+                </p>
             </div>
         </floater>
-        </floater>
+        <script>
+            $(document).ready(function() {
+                $('.hvr-grow').hover(
+                    function() {
+                        $(this).addClass('hvr-grow');
+                    },
+                    function() {
+                        $(this).removeClass('hvr-grow');
+                    }
+                );
+            });
+        </script>
     </body>
     
 </html>
